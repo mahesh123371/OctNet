@@ -1,103 +1,115 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
-    width: 100%;
-    height: 100%;
-}
-.top{
-    width: 100%;
-    height: 60vh;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUFiWJGp_Geby9a24J2DqSOcu_XcZjY6PI2g&s);
+body{
+    background-image: url(https://e7.pngegg.com/pngimages/156/516/png-clipart-paper-wood-flooring-plank-wood-texture-texture-brown-thumbnail.png);
     background-size: cover;
     background-position: center;
 }
-.overlay{
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+
+}
+header.conatiner{
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 70px;
+    width: 70px;
+
+}
+.logo p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: default;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    display: flex;
+    gap: 14px;
+    list-style: none;
+
+}
+li{
+    font-size: 20px;
+
+}
+nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:darkgoldenrod;
-    margin-left: 20px;
-    margin-right: 50px;
+    padding: 14px;
 }
-.logo{
-    font-size: 2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif; 
+.main{
+    width: 100%;
+    height: 90vh;
+    position:absolute;
 }
-.text{
+.main img{
+    display: block;
+    margin: auto;
+    height: 100%;
+    filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0) );
+}
+.content{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+.content.container{
+    justify-content: center;
     display: flex;
-    align-items: center;
-    gap: 9rem;
-    font-size: 2rem;
-    text-decoration: underline;
-    font-weight: bold;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+    height: 100%;
 }
-.text:hover{
-    color: black;
-}
-.icons{
+.todo{
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    font-size: 3rem;
+    justify-content: center;
+    padding: 10px;
+    margin-right: 600px;
+    margin-left: 600px;
 }
-.icons:hover{
-    color: black;
-}
-.buttom{
-   display: flex;
-   width: 100%;
-   min-height: 60vh;
-}
-.box1{
-    width: 30%;
-    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoj-WBXPhMsSL9QPBtfp8jweQQ7IofkADdVxVMXz-hmA6_c7ANr2UB41TxGFFpcKw9ZVU&usqp=CAU);
-    background-size: cover;
-    background-position: center;
-}
-.box1 h1{
-    text-align: center;
-    color: aliceblue; 
-    padding: 40px;
-}
-.box1 p{
-    text-align: justify;
-    font-family: comic sans ms;
-    color: cadetblue;
+.todo_value{
+    cursor: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
     font-weight: bold;
-    font-size: 17px;
+    flex-grow: 1;
+    border-bottom: 2px solid rgba(226, 25, 25, 0.829);
 }
-.box2{
-    width: 35%;
-    min-height: 30vh;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJlpgOzwjh3d5VTbE4aqLWMaSSCIb7Xlj3aw&s);
-    background-size: cover;
-    background-position: center;
+.todo_checkbox{
+cursor: inherit;
 }
-.box2 h1{
-    text-align: center;
-    padding: 95px;
-    color:cornsilk;
-    font-size: 2.2rem;
-}
-.box2 p{
-    text-align: justify;
-    font-family: comic sans ms;
-    color:lightgreen;
-}
-.box3{
-    width: 35%;
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/012/036/201/small_2x/beautiful-aurora-background-free-vector.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.box3 p{
-    margin-left: 350px;
-    margin-top: 40px;
-    color:rgb(46, 190, 102);
-    font-weight: bold;
-    font-size: 20px;
+.todo:has(.todo_checkbox:checked){
+   color: rgba(143, 72, 7, 0.781);
+   background: rgba(0, 0, 0, 0);
+   text-decoration: line-through 1.5px;
+   order: 1;
 }
 
